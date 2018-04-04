@@ -1,4 +1,12 @@
-# elm-package generated files
-elm-stuff
-# elm-repl generated files
-repl-temp-*
+# Ignore Mac OS files
+.DS_Store
+
+# Ignore the "local" versions of files
+*.local
+*.local.*
+
+# VScode Temp Spage
+vscode/workspaceStorage
+
+# Rope Temp Files
+.ropeproject
