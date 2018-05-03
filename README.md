@@ -1,7 +1,9 @@
 # Awwwesssooooome 's .dotfiles
-=========
 
-My dotfile configuration. Covers vim, ZSH and some other things, too.
+> My dotfile configuration. Covers vim, ZSH and some other things, too.
+
+---
+
 
 ## Installing the doftiles
 **Warning:** Review the code, and remove things you don’t want or need. Don’t blindly use my settings unless you know what that entails. Use at your own risk!
@@ -15,6 +17,7 @@ My dotfile configuration. Covers vim, ZSH and some other things, too.
    ```bash
    ~/.dotfiles/install.sh
    ```
+
 ## Feedback
 
 Suggestions/improvements
