@@ -1,0 +1,140 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Maintainer:
+"   Peng Cheng
+" Version:
+"   0.1 - 27/05/2013 17:42:11
+" Sections:
+"   -> General
+"   -> Vim user interface
+"   -> Text,tab and indent related
+"   -> Visual mode related
+"   -> Moving around, tabs and buffers
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ==> General
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nocompatible
+" Sets how many lines of history VIM has to remember
+set history=100
+
+" Enable filetype plugins
+filetype indent on              "针对不同文件类型采用不同缩进格式
+filetype plugin on              "针对不同的文件类型加载对应的插件
+filetype plugin indent on       "启用自动补全
+
+" Set to auto read when a file is changed from the outside
+set autoread
+
+" With a map leader it's possible to do extra key combinations
+" like <leader>w saves the current file
+let mapleader=","
+let g:mapleader=","
+
+" Fast saving and quit and so on
+nmap <leader>w :w!<cr>
+nmap <leader>q :q<cr>
+
+" Quickly get out of insert mode without your fingers having to leave
+" the home row (either use 'jj' or 'jk')
+imap jj <Esc> 
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ==> VIM user interface
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Turn on the wild menu
+set wildmenu
+
+" Always show current position
+set ruler
+
+" Height of the command bar
+set cmdheight=2
+
+" A buffer becomes hidden when it is abandoned
+set hid
+
+" Configure backspace so it acts as it should act
+set backspace=eol,start,indent
+set whichwrap+=<,>,h,l
+
+" Ignorecase case when searching
+set ignorecase
+
+" When searching try to be smart about cases
+set smartcase
+
+" Highlight search results
+set hlsearch
+
+" Makes search act like search in modern browsers
+set incsearch
+
+" Don't redraw while executing macros
+set lazyredraw
+
+" For regular expressions turn magic on
+set magic
+
+" Show matching brackets when text indicator is over them
+set showmatch
+" How many tenths of a second to blink when matching brackets
+set mat=2
+
+" No annoying sound on errors
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ==> Text, tab and indent related
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set expandtab "Use spaces instead of tabs
+set smarttab "Be smart when using tabs ; )
+
+" not work for webstorm
+"set tabstop=2       "将tab键改为2个空格
+"set softtabstop=2
+"set shiftwidth=2   "自动缩进时，使用2个空格，默认是8个
+
+" Linebreak on 200 characters
+set lbr
+set tw=200
+
+set ai "Auto indent
+set si "Smart indent
+set wrap "Wrap lines
+set nu              "Show line numbers 
+set showcmd         "在ruler左边显示当前正在输入的命令，提示性的，避免误操作
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ==> Visual mode related 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Visual mode pressing * or # searches for the current selection
+vnoremap <silent> * :call VisualSelection('f', '')<CR>
+vnoremap <silent> # :call VisualSelection('b', '')<CR>
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ==> Moving around, tabs, windows and buffers 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Treat long lines as break as break lines
+nnoremap j gj
+nnoremap k gk
+
+" Easy window navigation
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+" Userful mappings for managing tabs
+map <leader>tn :tabnew<cr>
+map <leader>to :tabonly<cr>
+map <leader>tc :tabclose<cr>
+map <leader>tm :tabmove
+map <leader>t<leader> :tabnext
