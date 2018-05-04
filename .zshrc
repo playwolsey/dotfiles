@@ -87,7 +87,7 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="vi ~/.zshrc"
 alias v=vim
 #alias envconfig="vi ~/Projects/config/env.sh"
-plugins=(git colored-man colorize github jira vagrant virtualenv pip python brew osx zsh-syntax-highlighting)
+plugins=(git npm yarn)
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
